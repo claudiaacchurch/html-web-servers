@@ -1,0 +1,19 @@
+<!-- GET /albums -->
+
+<html>
+  <head></head>
+  <body>
+
+
+<h1>Albums</h1>
+{% for album in albums %}
+<div>
+       <p class="t-title">Title: <a href ='/albums/{{album.id}}'>{{album.title}}</a></p>
+        <p class="t-release-year">Released: {{album.release_year}}</p>
+</div>
+{% endfor %}
+
+<div><a href='/albums/create'>Add a new album</a></div>
+    <!-- ... -->
+  </body>
+</html>
